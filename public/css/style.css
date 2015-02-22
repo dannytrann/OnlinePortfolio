@@ -237,6 +237,10 @@
   .section-header {
     font-size: 6em;
     font-weight: 100; } }
+@media (max-width: 800px) {
+  .section-header {
+    font-size: 3em;
+    font-weight: 100; } }
 #cover {
   min-height: calc(100vh - 64px); }
   #cover h1 {
@@ -268,9 +272,9 @@
     font-size: 120px; } }
 @media (max-width: 570px) {
   #cover h1 {
-    font-size: 4em; }
+    font-size: 2em; }
   #cover h4 {
-    font-size: 2em;
+    font-size: 1.7em;
     font-weight: 100; }
   #cover i {
     font-size: 100px; }
@@ -301,7 +305,7 @@
   #projects a {
     text-decoration: none; }
 
-@media (width: 800px) {
+@media (max-width: 800px) {
   .panel span {
     font-size: 2em;
     font-weight: 100; }
@@ -313,6 +317,20 @@
   .panel-body p {
     font-size: 1.7em;
     font-weight: 100; } }
+@media (max-width: 500px) {
+  #projects .panel span {
+    font-size: 1.5em;
+    font-weight: 100; }
+  #projects .panel img {
+    height: 70px;
+    width: 70px; }
+  #projects .panel-body p {
+    font-size: 1.7em;
+    font-weight: 100; }
+  #projects .panel-body img {
+    border-radius: 0;
+    height: 300px;
+    width: auto; } }
 #info {
   min-height: 100vh;
   background-color: lightslategray; }
@@ -351,9 +369,9 @@
 
 @media (max-width: 500px) {
   #contact .funny-sentance {
-    font-size: 2em; }
+    font-size: 1.5em; }
   #contact .funny-words {
-    font-size: 2em; } }
+    font-size: 1.5em; } }
 body {
   font-family: "Roboto"; }
 
@@ -380,19 +398,19 @@ body {
     font-size: 1.2em;
     font-weight: 100;
     text-decoration: none;
-    color: white; }
+    color: #03A9F4; }
   #navbar-block a:hover {
     text-decoration: none;
-    color: white; }
+    color: #03A9F4; }
   #navbar-block a:active {
     text-decoration: none;
-    color: white; }
+    color: #03A9F4; }
   #navbar-block a:focus {
     text-decoration: none;
-    color: white; }
+    color: #03A9F4; }
   #navbar-block a:visited {
     text-decoration: none;
-    color: white; } }
+    color: #03A9F4; } }
 #loader-wrapper {
   position: fixed;
   top: 0;
