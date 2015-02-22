@@ -375,21 +375,6 @@ body {
     text-decoration: none;
     color: #B3E5FC; }
 
-#loader-wrapper {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  z-index: 1000; }
-  #loader-wrapper #loader {
-    z-index: 1001;
-    margin-top: 45vh; }
-  #loader-wrapper #splurg h1 {
-    z-index: 1001;
-    font-size: 5em;
-    font-weight: 100; }
-
 @media (max-width: 500px) {
   #navbar-block a {
     font-size: 1.2em;
@@ -408,5 +393,19 @@ body {
   #navbar-block a:visited {
     text-decoration: none;
     color: white; } }
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 1000; }
+  #loader-wrapper #loader {
+    z-index: 1001;
+    margin-top: 45vh; }
+  #loader-wrapper #splurg h1 {
+    z-index: 1001;
+    font-size: 5em;
+    font-weight: 100; }
 
 /*# sourceMappingURL=style.css.map */
