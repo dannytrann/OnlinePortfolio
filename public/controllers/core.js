@@ -1,6 +1,6 @@
 window.onload = function () { $('#loader-wrapper').addClass("hide"); }
 // public/core.js
-var app = angular.module('dannyhaitran', ['ngRoute', 'projects']);
+var app = angular.module('dannyhaitran', ['projects', 'smoothScroll']);
 var faded = false;
 app.controller("MainController", function(){
     window.addEventListener("scroll", function() {

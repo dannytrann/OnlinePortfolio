@@ -368,6 +368,12 @@ body {
   #navbar-block a:active {
     color: #B3E5FC;
     text-decoration: none; }
+  #navbar-block a:focus {
+    text-decoration: none;
+    color: #B3E5FC; }
+  #navbar-block a:visited {
+    text-decoration: none;
+    color: #B3E5FC; }
 
 #loader-wrapper {
   position: fixed;
@@ -387,10 +393,20 @@ body {
 @media (max-width: 500px) {
   #navbar-block a {
     font-size: 1.2em;
-    font-weight: 100; }
+    font-weight: 100;
+    text-decoration: none;
+    color: white; }
   #navbar-block a:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    color: white; }
   #navbar-block a:active {
-    text-decoration: none; } }
+    text-decoration: none;
+    color: white; }
+  #navbar-block a:focus {
+    text-decoration: none;
+    color: white; }
+  #navbar-block a:visited {
+    text-decoration: none;
+    color: white; } }
 
 /*# sourceMappingURL=style.css.map */

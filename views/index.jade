@@ -49,11 +49,11 @@ html(ng-app="dannyhaitran")
                         li
                             a(href="#") Home
                         li
-                            a(href="#projects") Projects
+                            a(href="#projects" scroll-to='projects') Projects
                         li
-                            a(href="#info") About me
+                            a(href="#info" scroll-to='info') About me
                         li
-                            a(href="#contact") Contact
+                            a(href="#contact" scroll-to='contact') Contact
                     ul#mobile-demo.right.side-nav.hidden-sm.hidden-md.hidden-lg
                         li
                             a(href="#") Home
@@ -63,13 +63,13 @@ html(ng-app="dannyhaitran")
                             a(href="#info") About me
                         li
                             a(href="#contact") Contact
-        div#cover.valign-wrapper.col.s12.parallax-window
+        div#cover(name="home").valign-wrapper.col.s12.parallax-window
             div.col.s12.center
                 h1#name.valign.col.s12.flow-text Danny Hai Tran
                 h4#titles.valign.col.s12.flow-text.margin-top-6 Developer Athlete Traveler
                 //a#more-icon
                 //    i.mdi-navigation-expand-more
-        div#projects(ng-controller="ProjectController as projectCtrl")
+        div#projects(name="projects" ng-controller="ProjectController as projectCtrl")
             div.padding-top-5
             div.center
                 h1.section-header Projects
@@ -89,7 +89,7 @@ html(ng-app="dannyhaitran")
                                     div.col.s5
                                         div(ng-repeat="image in project.images")
                                             img(ng-src="{{'img/projects/' + image}}" width="500px").margin-bottom-4
-        div#info.z-depth-2
+        div#info.z-depth-2(name="info")
             h1.center.section-header.padding-top-7.margin-down-none Info
             div.row.col.s12.margin-down-none
                 div.col.s12.m6.offset-m3.l4
@@ -111,7 +111,7 @@ html(ng-app="dannyhaitran")
                                 img(src="img/info/3.jpg").info-img
                         p I've been an athlete ever since I was a toddler. Always willing to try something new. Climbing walls and biking are my preffered ways to get around. A lover of all ball sports including bowling.
         div#section-image.parallax-window
-        div#contact.row
+        div#contact.row(name="contact")
             div.col.s10.offset-s1
                 h1.section-header.center.padding-top-5 Contact
                 span.funny-sentance If for any reason you'd like to contact me for business inquiries or just to know more about me, you can contact me at
@@ -122,12 +122,12 @@ html(ng-app="dannyhaitran")
         div#footer.valign-wrapper
             div(ng-view)
             h1.valign.section-header
-        script(src="/scripts/angular/angular.min.js")
-        script(src="/scripts/angular-route/angular-route.min.js")
-        script(src="js/jquery-1.11.2.js")
-        script(src="js/bootstrap.min.js")
-        script(src="js/materialize.min.js")
-        script(src="js/parallax.min.js")
-        script(src="controllers/projects.js")
-        //script(src="controllers/thefacestudio.controller.js")
-        script(src="controllers/core.js")
+        script(language="JavaScript" type="text/javascript" src="/scripts/angular/angular.min.js")
+        script(language="JavaScript" type="text/javascript" src="/scripts/angular-route/angular-route.min.js")
+        script(language="JavaScript" type="text/javascript" src='/scripts/ngSmoothScroll/angular-smooth-scroll.js')
+        script(language="JavaScript" type="text/javascript" src="js/jquery-1.11.2.js")
+        script(language="JavaScript" type="text/javascript" src="js/bootstrap.min.js")
+        script(language="JavaScript" type="text/javascript" src="js/materialize.min.js")
+        script(language="JavaScript" type="text/javascript" src="js/parallax.min.js")
+        script(language="JavaScript" type="text/javascript" src="controllers/projects.js")
+        script(language="JavaScript" type="text/javascript" src="controllers/core.js")

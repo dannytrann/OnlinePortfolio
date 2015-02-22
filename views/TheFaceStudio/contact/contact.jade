@@ -18,32 +18,32 @@ div#inner-contacts(ng-controller='ContactController as contactCtrl')
         div#contact-right.col.s12.m6
             div.row.text-center
                 h1 Leave a message
-            form.col.s12(ng-submit='contactCtrl.submit(email)')
+            form.col.s12(ng-submit="contactCtrl.submit(email)")
                 div.row
                     div.input-field.col.s6
-                        input#first_name.validate(type='text', ng-model='email.firstname', name='fname')
-                        label(for='first_name') First Name
+                        input#first_name.validate(type="text" ng-model="email.firstname" name="fname")
+                        label(for="first_name") First Name
                     div.input-field.col.s6
-                        input#last_name.validate(type='text', ng-model='email.lastname', name='lname')
+                        input#last_name.validate(type='text' ng-model='email.lastname' name='lname')
                         label(for='last_name') Last Name
                 div.row
                    div.input-field.col.s12
-                        input#email.validate(type='email', ng-model='email.email', name='email')
+                        input#email.validate(type='email' ng-model='email.email' name='email')
                         label(for='email') Email
                 div.row
                     div.input-field.col.s12
-                        input#username.validate(type='text', ng-model='email.subject', name='subject')
+                        input#username.validate(type='text' ng-model='email.subject' name='subject')
                         label(for='username') Subject
                 div.row
                     div.input-field.col.s12
-                        textarea.materialize-textarea(ng-model='email.message', name='message')
+                        textarea.materialize-textarea(ng-model='email.message' name='message')
                         label Your Message
                 div.row.pull-right
-                    button.btn.waves-effect.waves-teal(type='submit', name='action') Submit
-                    i.mdi-content-send.right
-           div.row
-                div.col.s10.offset-s1
-                    hr
+                    button.btn.waves-effect.waves-teal(type='submit' name='action') Submit
+                        i.mdi-content-send.right
+        div.row
+            div.col.s10.offset-s1
+                hr
     div#contact-footer.row.text-center
         div.col.s8.offset-s2
             p Contact us for a Free consultation!
