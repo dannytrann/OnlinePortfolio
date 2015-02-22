@@ -12,7 +12,7 @@ app.controller('MainController', function($scope){
         });
         $(".button-collapse").sideNav();
         $('ul.tabs').tabs();
-
+        $('select').material_select();
     });
 });
 app.controller('ScrollController', ['$scope', '$location', '$anchorScroll',
@@ -34,12 +34,13 @@ app.controller('ServiceController',[ '$http',function ($http) {
         services.services = data;
     });
     this.services = services.services;
-
-    this.getServiceDesc = function(tab){
-        if (tab == 1 )
-            return this.services[0].description;
+    var serviceDescription = null;
+    this.getServiceDesc = function(tab) {
+        if (tab == 1)
+            serviceDescription = this.services[0].description;
         else
-            return this.services[1].description;
+            serviceDescription = this.services[1].description;
+        return serviceDescription;
     }
 }]);
 var testTicket = {
