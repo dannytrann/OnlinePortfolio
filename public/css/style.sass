@@ -1,0 +1,50 @@
+//main.scss
+@import '_variables'
+@import '_static'
+@import 'cover'
+@import 'projects'
+@import 'info'
+@import 'footer'
+@import 'contact'
+
+body
+  font-family: $font
+
+//navigation
+#navbar-block
+  background-color: $accent-color
+  a
+    font-size: 1.2em
+    font-weight: 100
+  a:hover
+    color: $light-primary-color
+    text-decoration: none
+  a:active
+    color: $light-primary-color
+    text-decoration: none
+//Preloader
+#loader-wrapper
+  position: fixed
+  top: 0
+  width: 100%
+  height: 100%
+  background: white
+  z-index: 1000
+  #loader
+    z-index: 1001
+    margin-top: 45vh
+  #splurg
+    h1
+      z-index: 1001
+      font-size: 5em
+      font-weight: 100
+@media (max-width: 500px)
+  //navigation
+  #navbar-block
+    a
+      font-size: 1.2em
+      font-weight: 100
+    a:hover
+      text-decoration: none
+    a:active
+      text-decoration: none

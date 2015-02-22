@@ -1,0 +1,133 @@
+doctype
+html(ng-app="dannyhaitran")
+    header
+        title Danny Hai Tran
+        link(rel='stylesheet', href='css/materialize.min.css')
+        link(rel='stylesheet', href='css/bootstrap.min.css')
+        link(rel='stylesheet', href='css/style.css')
+    body(ng-controller="MainController as mainCtrl")
+        div#loader-wrapper
+            div#loader.valign-wrapper
+                div.preloader-wrapper.big.active#actual-loader
+                    div.spinner-layer.spinner-blue
+                        div.circle-clipper.left
+                            div.circle
+                        div.gap-patch
+                            div.circle
+                        div.circle-clipper.right
+                            div.circle
+                    div.spinner-layer.spinner-red
+                        div.circle-clipper.left
+                            div.circle
+                        div.gap-patch
+                            div.circle
+                        div.circle-clipper.right
+                            div.circle
+                    div.spinner-layer.spinner-yellow
+                        div.circle-clipper.left
+                            div.circle
+                        div.gap-patch
+                            div.circle
+                        div.circle-clipper.right
+                            div.circle
+                    div.spinner-layer.spinner-green
+                        div.circle-clipper.left
+                            div.circle
+                        div.gap-patch
+                            div.circle
+                        div.circle-clipper.right
+                            div.circle
+                div#splurg
+                    h1 Loading Magic
+        div.navbar-fixed#navbar
+            nav
+                div.nav-wrapper#navbar-block
+                    a.margin-left-2 Danny Hai Tran
+                    a(href="#" data-activates="mobile-demo").button-collapse.hidden-sm.hidden-md.hidden-lg
+                        i.mdi-navigation-menu
+                    ul#nav-mobile.right.hidden-xs
+                        li
+                            a(href="#") Home
+                        li
+                            a(href="#projects") Projects
+                        li
+                            a(href="#info") About me
+                        li
+                            a(href="#contact") Contact
+                    ul#mobile-demo.right.side-nav.hidden-sm.hidden-md.hidden-lg
+                        li
+                            a(href="#") Home
+                        li
+                            a(href="#projects") Projects
+                        li
+                            a(href="#info") About me
+                        li
+                            a(href="#contact") Contact
+        div#cover.valign-wrapper.col.s12.parallax-window
+            div.col.s12.center
+                h1#name.valign.col.s12.flow-text Danny Hai Tran
+                h4#titles.valign.col.s12.flow-text.margin-top-6 Developer Athlete Traveler
+                //a#more-icon
+                //    i.mdi-navigation-expand-more
+        div#projects(ng-controller="ProjectController as projectCtrl")
+            div.padding-top-5
+            div.center
+                h1.section-header Projects
+            div.project-accordion.col.s12
+                div.panel-group#accordion
+                    div.panel.panel-default(ng-repeat="project in projectCtrl.projects")
+                        a(data-toggle="collapse" data-parent="#accordion" href="#collapseOne" ng-href="{{'#'+project.id}}").project-panels
+                            div.panel-heading
+                                h4.panel-title
+                                    img(ng-src="{{'img/logos/'+ project.logo}}").margin-right-3
+                                    span {{project.name}}
+                        div(ng-attr-id="{{project.id}}").panel-collapse.collapse.out
+                            div.panel-body
+                                div.col.row
+                                    div.col.s10.offset-s1.l5.offset-l1
+                                        p {{project.description}}
+                                    div.col.s5
+                                        div(ng-repeat="image in project.images")
+                                            img(ng-src="{{'img/projects/' + image}}" width="500px").margin-bottom-4
+        div#info.z-depth-2
+            h1.center.section-header.padding-top-7.margin-down-none Info
+            div.row.col.s12.margin-down-none
+                div.col.s12.m6.offset-m3.l4
+                    div.col.s10.offset-s1.center
+                        div.card
+                            div.card-image
+                                img(src="img/info/1.jpg").info-img
+                        p A graduate from British Columbia Institute of Technology out of the Computer System Technology program, I learned the basics of software development, hardware, database, and standard techniques to jump-start my career in web development
+                div.col.s12.m6.offset-m3.l4
+                    div.col.s10.offset-s1.center
+                        div.card
+                            div.card-image
+                                img(src="img/info/2.jpg").info-img
+                        p I've had plenty of opportunties to work with industry clients where I applied all my knowledge and ship products under intense pressure and time constraints
+                div.col.s12.m6.offset-m3.l4
+                    div.col.s10.offset-s1.center
+                        div.card
+                            div.card-image
+                                img(src="img/info/3.jpg").info-img
+                        p I've been an athlete ever since I was a toddler. Always willing to try something new. Climbing walls and biking are my preffered ways to get around. A lover of all ball sports including bowling.
+        div#section-image.parallax-window
+        div#contact.row
+            div.col.s10.offset-s1
+                h1.section-header.center.padding-top-5 Contact
+                span.funny-sentance If for any reason you'd like to contact me for business inquiries or just to know more about me, you can contact me at
+                span.funny-words   778.558.0639
+                span.funny-sentance   or email me at
+                span.funny-words  dannyhaitran@outlook.com
+                span.funny-sentance  . Email is preferred.
+        div#footer.valign-wrapper
+            div(ng-view)
+            h1.valign.section-header
+        script(src="/scripts/angular/angular.min.js")
+        script(src="/scripts/angular-route/angular-route.min.js")
+        script(src="js/jquery-1.11.2.js")
+        script(src="js/bootstrap.min.js")
+        script(src="js/materialize.min.js")
+        script(src="js/parallax.min.js")
+        script(src="controllers/projects.js")
+        //script(src="controllers/thefacestudio.controller.js")
+        script(src="controllers/core.js")
