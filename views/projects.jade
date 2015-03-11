@@ -1,0 +1,20 @@
+div.padding-top-5
+    div.center
+        h1.section-header Projects
+    div.project-accordion.col.s12
+        div.panel-group#accordion
+            div.panel.panel-default(ng-repeat="project in projectCtrl.projects")
+                a(data-toggle="collapse" data-parent="#accordion" href="#collapseOne" ng-href="{{'#'+project.id}}").project-panels
+                    div.panel-heading
+                        h4.panel-title
+                            img(ng-src="{{'img/logos/'+ project.logo}}").margin-right-3
+                            span {{project.name}}
+                div(ng-attr-id="{{project.id}}").panel-collapse.collapse.out
+                    div.panel-body
+                        div.col.row
+                            div.col.s10.offset-s1.l5.offset-l1
+                                a(ng-href="{{project.link}}" ng-hide="!project.link") Click here to check it out
+                                p {{project.description}}
+                            div.col.s5
+                                div(ng-repeat="image in project.images")
+                                    img(ng-src="{{'img/projects/' + image}}" width="500px").margin-bottom-4

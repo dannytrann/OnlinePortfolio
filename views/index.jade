@@ -71,55 +71,12 @@ html(ng-app="dannyhaitran")
                 //a#more-icon
                 //    i.mdi-navigation-expand-more
         div#projects(name="projects" ng-controller="ProjectController as projectCtrl")
-            div.padding-top-5
-            div.center
-                h1.section-header Projects
-            div.project-accordion.col.s12
-                div.panel-group#accordion
-                    div.panel.panel-default(ng-repeat="project in projectCtrl.projects")
-                        a(data-toggle="collapse" data-parent="#accordion" href="#collapseOne" ng-href="{{'#'+project.id}}").project-panels
-                            div.panel-heading
-                                h4.panel-title
-                                    img(ng-src="{{'img/logos/'+ project.logo}}").margin-right-3
-                                    span {{project.name}}
-                        div(ng-attr-id="{{project.id}}").panel-collapse.collapse.out
-                            div.panel-body
-                                div.col.row
-                                    div.col.s10.offset-s1.l5.offset-l1
-                                        p {{project.description}}
-                                    div.col.s5
-                                        div(ng-repeat="image in project.images")
-                                            img(ng-src="{{'img/projects/' + image}}" width="500px").margin-bottom-4
+            include projects.jade
         div#info.z-depth-2(name="info")
-            h1.center.section-header.padding-top-7.margin-down-none Info
-            div.row.col.s12.margin-down-none
-                div.col.s12.m6.offset-m3.l4
-                    div.col.s10.offset-s1.center
-                        div.card
-                            div.card-image
-                                img(src="img/info/1.jpg").info-img
-                        p A graduate from British Columbia Institute of Technology out of the Computer System Technology program, I learned the basics of software development, hardware, database, and standard techniques to jump-start my career in web development
-                div.col.s12.m6.offset-m3.l4
-                    div.col.s10.offset-s1.center
-                        div.card
-                            div.card-image
-                                img(src="img/info/2.jpg").info-img
-                        p I've had plenty of opportunties to work with industry clients where I applied all my knowledge and ship products under intense pressure and time constraints
-                div.col.s12.m6.offset-m3.l4
-                    div.col.s10.offset-s1.center
-                        div.card
-                            div.card-image
-                                img(src="img/info/3.jpg").info-img
-                        p I've been an athlete ever since I was a toddler. Always willing to try something new. Climbing walls and biking are my preffered ways to get around. A lover of all ball sports including bowling.
+            include info.jade
         div#section-image.parallax-window
         div#contact.row(name="contact")
-            div.col.s10.offset-s1
-                h1.section-header.center.padding-top-5 Contact
-                span.funny-sentance If for any reason you'd like to contact me for business inquiries or just to know more about me, you can contact me at
-                span.funny-words   778.558.0639
-                span.funny-sentance   or email me at
-                span.funny-words  dannyhaitran@outlook.com
-                span.funny-sentance  . Email is preferred.
+            include contact.jade
         div#footer.valign-wrapper
             div(ng-view)
             h1.valign.section-header
