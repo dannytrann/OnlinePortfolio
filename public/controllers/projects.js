@@ -6,9 +6,12 @@ app.controller("ProjectController", ['$http', function($http){
 
     var project = this;
     project.projects = [];
-    $http.get('../projects.json').success(function(data){
-        project.projects = data;
-    });
+    setTimeout(function(){
+        $http.get('../projects.json').success(function(data){
+            project.projects = data;
+        });
+    }, 3000);
+
 
     $(document).ready(function(){
         $('.collapsible').collapsible({
