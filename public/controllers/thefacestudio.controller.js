@@ -66,9 +66,7 @@ app.controller('TestimonialController', ['$http',function($http){
             $(id).openModal();
         });
     };
-
 }]);
-
 app.controller('ContactController', function(){
     this.submit = function(email){
         console.log(email.firstname);

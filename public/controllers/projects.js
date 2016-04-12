@@ -11,17 +11,13 @@ app.controller("ProjectController", ['$http', function($http){
             project.projects = data;
         });
     }, 3000);
-
-
     $(document).ready(function(){
         $('.collapsible').collapsible({
             accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
         });
         $(".button-collapse").sideNav();
     });
-
     var bgArray = ['city.png','guitar.jpg','music.jpg'];
     var chosenBG = bgArray[Math.floor(Math.random()*bgArray.length)];
     $('.parallax-window').parallax({imageSrc: 'img/bg/'+chosenBG});
-
 }]);
