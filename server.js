@@ -8,6 +8,17 @@ var mongoose = require('mongoose'); // mongod glue
 var morgan = require('morgan'); // logs request to the console
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var vhost = require( 'vhost' );
+
+
+// Virtual Host Configuration ==============================
+
+function createVirtualHost(domainName, dirPath) {
+    return vhost(domainName, express.static( dirPath ));
+}
+
+var dannyhaitranHost = createVirtualHost("www.dannyhaitran.com", "public");
+var meganminatoHost = createVirtualHost("www.meganminato.com", "meganminato");
 
 // Configuration ===========================================
 mongoose.connect('mongodb://localhost/dannyhaitran');
@@ -23,6 +34,8 @@ app.use(bodyParser.urlencoded({'extended':'true'}));            // parse applica
 app.use(bodyParser.json());                                     // parse application/json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
+app.use(dannyhaitranHost);
+app.use(meganminatoHost);
 app.set('view engine', 'jade');
 
 // Define model ======================================
